@@ -23,6 +23,7 @@ function WeatherBoard({weatherArr,cityInfo,error}){
 
     const timeLabels =["2 am","5 am","8 am","11 am","2 pm","5 pm","8 pm","11 pm"]
        
+    //On Component Mount setup the days array, with the next 5 days of the week starting from tomorrow
     useEffect(()=>{
        
         if(days.length == 0){
@@ -42,7 +43,7 @@ function WeatherBoard({weatherArr,cityInfo,error}){
     },[])
 
    
-
+    // Whenever user chooses different date , show data mathcing the date
     useEffect(()=>{
       
      if(weatherArr.length != 0){
@@ -56,11 +57,9 @@ function WeatherBoard({weatherArr,cityInfo,error}){
        
         }
        
-        
-
-       
     },[date,weatherArr])
 
+    //Once you get the weather Array , fill in the bottom weather cards for next 5 days
     useEffect(()=>{
      
         if(days.length !== 0 && weatherArr.length !== 0){
@@ -93,22 +92,22 @@ function WeatherBoard({weatherArr,cityInfo,error}){
             }
             setDivDayGrid(tempDayGrid)
         }
-
-
         
     },[days,weatherArr])
 
+
+    // Helps chnage the selected display time
     function selectedDisplayTime(index){
         setDisplayTime(index)
     }
-
+    //Helps change the day from the weather card at the cottom
     function chooseDay(e){
         console.log(e.currentTarget.id,"id")
         setDate(e.currentTarget.id)
        
     }
 
-    
+    // Based on the date selected and the display time selected, the display changes
     useEffect(()=>{
         if(selectedDates){
          
@@ -169,7 +168,7 @@ function WeatherBoard({weatherArr,cityInfo,error}){
 
 
 
-
+// Time slider componnet, to display the differnt hourly times
 function TimeRuler({times,selectedDisplayTime,displayTime}){
     const [selectedTime,setSelectedTime] = useState(displayTime)
 
