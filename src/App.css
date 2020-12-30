@@ -50,7 +50,7 @@ body{
 hr{
 position: relative;
 
-
+border : 1px solid #C7DBFC;
 top:2px;
 }
 .circles{
@@ -66,6 +66,7 @@ top:2px;
  
 }
 .label{
+  margin-top: 5px;
   position: absolute;
   z-index: 1;
 }
@@ -83,8 +84,10 @@ top:2px;
   text-align: center;
 }
 .active{
+  top:15;
   height:10px;
   width: 10px;
+  background-color: #C7DBFC;
 }
 
 .choose-day-div{
