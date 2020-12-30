@@ -1,38 +1,126 @@
-.App {
+body{
+  background-color: #F7F8F9;
+}
+.app-container{
+  width:60vw;
+  margin: auto;
+  margin-top:40px;
+  text-align: center;
+
+}
+.search{
+  border-radius: 20px;
+  background-color: #E2E8F0;
+  outline: none;
+  border: none;
+  width: 80%;
+  margin: auto;
+  font-size: 17px;
+  padding: 15px;
+}
+.weather-board{
+  width:100%;
+  margin: 30px auto;
+  height:75vh;
+  background-color: white;
+  box-shadow: 5px 5px 2px grey;
+  text-align: left;
+  padding: 20px;
+  letter-spacing: 1.5px;
+ 
+}
+.city{
+  display: inline-block;
+ 
+ 
+}
+.inner-container{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin:30px;
+}
+.right{
+  text-align: right;
+}
+.time-ruler{
+  position: relative;
+  height: 10px;
+ 
+}
+hr{
+position: relative;
+
+
+top:2px;
+}
+.circles{
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  border:1px solid black;
+  background-color: white;
+  position: absolute;
+  top:0;
+  z-index: 1;
+  cursor: pointer;
+ 
+}
+.label{
+  position: absolute;
+  z-index: 1;
+}
+.div-grid{
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  margin:20px;
+
+  justify-content: center;
+  justify-items: center ;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.choose-day-div{
+  justify-self:center ;
+  text-align: center;
+}
+.active{
+  height:10px;
+  width: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.choose-day-div{
+  cursor: pointer;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.small-celsius{
+  font-size: 1em;
 }
-
-.App-link {
-  color: #61dafb;
+.main-temp-img-grid{
+  width:100%;
+ 
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main-icon{
+    object-fit: cover;
+    object-position: center;
+   width:100%;
+  
+   justify-self: center;
+}
+img{
+  justify-self: right;
+width:60%;
+height: auto;
+color:#FEE227;
+}
+.main-temp-img-grid h1{
+  justify-self: left;
+  align-self: left;
+ 
+  
+}
+.weather-card-icon{
+  object-fit: cover;
+  object-position: center;
+  width:80%;
+  
 }
