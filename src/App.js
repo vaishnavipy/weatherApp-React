@@ -31,7 +31,7 @@ function App() {
     console.log(city)
   if(city){
       
-    fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=5ada776395213f1480b5effb09d7710d`)
+    fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=API_KEY`)
     .then(response => response.json())
     .then(data => { 
       if(data.cod == "200") {setWeatherArr([...data.list])
