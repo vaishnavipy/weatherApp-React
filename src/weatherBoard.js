@@ -68,7 +68,7 @@ function WeatherBoard({weatherArr,cityInfo,error}){
                 var d = ((obj.dt_txt.split(" "))[0].slice(-2))
                
               
-                if(matchDate !== d ){
+                if(matchDate !== d && d != new Date().getDate() ){
                    
                   
                     matchDate =  ((obj.dt_txt.split(" "))[0].slice(-2))
